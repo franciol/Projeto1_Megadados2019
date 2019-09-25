@@ -30,6 +30,7 @@ CREATE TABLE usuario (
     Nome VARCHAR(50) NOT NULL,
     Email VARCHAR(50) NOT NULL,
     id_cidade INT NOT NULL,
+    ativo TINYINT NOT NULL DEFAULT 1,
     PRIMARY KEY (id_usuario),
     FOREIGN KEY (id_cidade) REFERENCES cidade (id_cidade)
 );
@@ -40,6 +41,7 @@ CREATE TABLE post (
     Imagem VARCHAR(512),
     Texto Varchar(200) NOT NULL,
     id_usuario INT NOT NULL,
+    ativo TINYINT NOT NULL DEFAULT 1,
     PRIMARY KEY (id_post),
     FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario)
 );
