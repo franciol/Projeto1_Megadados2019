@@ -3,7 +3,6 @@ import json
 
 def run_db_query(connection, query, args=None):
     with connection.cursor() as cursor:
-        print("Executando query:")
         cursor.execute(query, args)
         for result in cursor:
             print(result)
