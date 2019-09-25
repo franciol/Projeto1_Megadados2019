@@ -39,7 +39,7 @@ CREATE TABLE post (
     id_post INT NOT NULL AUTO_INCREMENT,
     Titulo VARCHAR(50) NOT NULL,
     Imagem VARCHAR(512),
-    Texto Varchar(200) NOT NULL,
+    Texto Varchar(200),
     id_usuario INT NOT NULL,
     ativo TINYINT NOT NULL DEFAULT 1,
     PRIMARY KEY (id_post),
