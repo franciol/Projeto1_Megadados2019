@@ -75,7 +75,7 @@ CREATE TABLE viu_post (
     id_post INT NOT NULL,
     id_OS INT NOT NULL,
     id_browser INT NOT NULL,
-    IP INT NOT NULL,
+    IP VARCHAR(50) NOT NULL,
     horario DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id_post, id_usuario),
     FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario),
